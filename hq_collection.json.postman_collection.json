@@ -1,0 +1,178 @@
+{
+  "info": {
+    "_postman_id": "388011cc-6e81-4891-8451-661fc5e8555e",
+    "name": "hq_collection.json",
+    "description": "Chat App",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33969186"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"user1\",\r\n    \"password\": \"12345\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/user/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["user", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"user1\",\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"abc\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/user/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["user", "register"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FetchUsers",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDA4NjI2YzVmMDc3MThkOWJlMGQ0NSIsImlhdCI6MTcxNTUwNTM5MywiZXhwIjoxNzE4MDk3MzkzfQ.6ic3AwXjIG4yq1Kh5NlFTQHJBCMAyEYVZ6B5CGKxsjU",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/user/fetchUsers",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["user", "fetchUsers"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CreateChat",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDA4NjI2YzVmMDc3MThkOWJlMGQ0NSIsImlhdCI6MTcxNTUwNTM5MywiZXhwIjoxNzE4MDk3MzkzfQ.6ic3AwXjIG4yq1Kh5NlFTQHJBCMAyEYVZ6B5CGKxsjU",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/chat/66408626c5f07718d9be0d45",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["chat", "66408626c5f07718d9be0d45"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FetchChats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/chat/66408626c5f07718d9be0d45",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["chat", "66408626c5f07718d9be0d45"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CreateGroup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/create-groups",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["create-groups"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ExitGroup",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/groupExit",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["groupExit"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FetchGroups",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/fetchGroups",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["fetchGroups"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
